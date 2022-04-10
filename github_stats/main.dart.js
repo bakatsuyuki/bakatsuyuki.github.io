@@ -46353,7 +46353,7 @@ A.a1O.prototype={
 $1(a){return new A.jm(a.mP($.acT(),t.kk))},
 $S:277}
 A.a0S.prototype={
-$1(a){var s,r,q,p,o,n=null,m=t.N,l=A.av(["Authorization","Bearer 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"],m,m),k=new A.Oh(A.uu("https://api.github.com/graphql"),l)
+$1(a){var s,r,q,p,o,n=null,m=t.N,l=A.av(["Authorization","Bearer " + process.env.API_TOKEN],m,m),k=new A.Oh(A.uu("https://api.github.com/graphql"),l)
 k.r=new A.Ka(A.aM(t.Ff))
 l=A.a([],t.xF)
 s=A.aoz(A.anA())
