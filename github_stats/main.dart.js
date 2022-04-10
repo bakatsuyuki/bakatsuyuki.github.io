@@ -14243,7 +14243,7 @@ jm:function jm(a){this.a=a},
 a28(){var s=0,r=A.a9(t.H),q
 var $async$a28=A.a3(function(a,b){if(a===1)return A.a6(b,r)
 while(true)switch(s){case 0:s=2
-return A.a5($.a5D().oU(0,".env"),$async$a28)
+return A.a5($.a5D().oU(0,"production.env"),$async$a28)
 case 2:if($.aP==null)A.a97()
 q=$.aP
 q.FH(B.BF)
