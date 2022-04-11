@@ -5,16 +5,12 @@ on:
     branches:
       - main  # Set a branch name to trigger deployment
   pull_request:
-
+env:
+  API_TOKEN: ${{ secrets.API_TOKEN }}
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3.7.3
+      - uses: bluefireteam/flutter-gh-pages@v7
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          API_TOKEN: ${{ secrets.API_TOKEN }}
-          publish_dir: ./public
+          customArgs: --dart-define="apiBaseUrl=${{ secrets.API_TOKENT }}"
+
