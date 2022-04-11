@@ -22,7 +22,7 @@ jobs:
         flutter pub get
 
     - name: Build
-      run: flutter build web --dart-define="API_TOKENT=${{ secrets.API_TOKENT }}"
+      run: flutter build web --dart-define="API_TOKEN=${{ secrets.API_TOKEN }}"
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2.8.0
