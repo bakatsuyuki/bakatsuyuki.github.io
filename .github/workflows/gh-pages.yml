@@ -1,28 +1,32 @@
-name: GitHub Pages
+name: github pages
 
 on:
   push:
     branches:
-      - main  # Set a branch name to trigger deployment
-  pull_request:
-<<<<<<< HEAD
-env:
-  API_TOKEN: ${{ secrets.API_TOKEN }}
-=======
+      - master
 
-env:
-  API_TOKEN: ${{ secrets.API_TOKEN }}
-
->>>>>>> 169ee8d3deda3067caec91599374b314dc06ec4a
 jobs:
-  deploy:
+  build-deploy:
+    runs-on: ubuntu-18.04
     steps:
-      - uses: bluefireteam/flutter-gh-pages@v7
-        with:
-<<<<<<< HEAD
-          customArgs: --dart-define="apiBaseUrl=${{ secrets.API_TOKENT }}"
+    - uses: actions/checkout@master
 
-=======
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
->>>>>>> 169ee8d3deda3067caec91599374b314dc06ec4a
+    - name: Setup Flutter
+      uses: subosito/flutter-action@v1
+      with:
+        channel: 'beta'
+
+    - name: Install
+      run: |
+        flutter config --enable-web
+        flutter pub get
+
+    - name: Build
+      run: flutter build web --dart-define="apiBaseUrl=${{ secrets.API_TOKENT }}"
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2.8.0
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./build/web
