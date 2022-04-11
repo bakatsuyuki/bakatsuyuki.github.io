@@ -6,6 +6,9 @@ on:
       - main  # Set a branch name to trigger deployment
   pull_request:
 
+env:
+  API_TOKEN: ${{ secrets.API_TOKEN }}
+
 jobs:
   deploy:
     runs-on: ubuntu-20.04
@@ -16,5 +19,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          API_TOKEN: ${{ secrets.API_TOKEN }}
           publish_dir: ./public
