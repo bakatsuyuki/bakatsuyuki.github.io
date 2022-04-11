@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@jamesives/github-pages-deploy-action": "^4.3.0"
+  }
+}
