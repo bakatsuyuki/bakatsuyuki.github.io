@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/bakatsuyuki.github.io.iml" filepath="$PROJECT_DIR$/.idea/bakatsuyuki.github.io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/github_stats_flutter.iml" filepath="$PROJECT_DIR$/github_stats_flutter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/github_stats_flutter_android.iml" filepath="$PROJECT_DIR$/android/github_stats_flutter_android.iml" />
     </modules>
   </component>
 </project>

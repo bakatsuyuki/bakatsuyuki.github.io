@@ -1,0 +1,27 @@
+name: github_stats_flutter
+description: A new Flutter application.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  graphql:
+  flutter_riverpod:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+  freezed:
+  build_runner:
+  mockito:
+
+flutter:
+  uses-material-design: true
