@@ -9,7 +9,9 @@ final githubStatsRepository = Provider(
 );
 
 class GithubStatsRepository {
-  const GithubStatsRepository({required this.gitHubGQL});
+  const GithubStatsRepository({
+    required this.gitHubGQL,
+  });
 
   final GitHubGQL gitHubGQL;
 
